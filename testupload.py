@@ -19,7 +19,7 @@ my_font2 = ('arial', 15)
 my_w.geometry("300x300")
 
 
-l1 = customtkinter.CTkLabel(master=my_w, text='Upload your Yuji', width=30, font=my_font1)
+l1 = customtkinter.CTkLabel(master=my_w, text='Upload your Image', width=30, font=my_font1)
 l1.place(relx=0.5, rely=0.3, anchor=CENTER)
 
 width = 300  # Width
@@ -51,22 +51,22 @@ def upload_and_process():
         image_blurednoise = cv2.blur(image_noise, (15, 15))
 
         plt.figure(figsize=(12, 6))
-        plt.subplot(231), plt.imshow(image), plt.title('Original Yuji')
+        plt.subplot(231), plt.imshow(image), plt.title('Original Image')
         plt.xticks([])
         plt.yticks([])
-        plt.subplot(232), plt.imshow(image_gray, cmap='gray'), plt.title('Yuji in Gray')
+        plt.subplot(232), plt.imshow(image_gray, cmap='gray'), plt.title('Image in Gray')
         plt.xticks([])
         plt.yticks([])
-        plt.subplot(233), plt.imshow(image_blur), plt.title('Yuji with Blur')
+        plt.subplot(233), plt.imshow(image_blur), plt.title('Image with Blur')
         plt.xticks([])
         plt.yticks([])
-        plt.subplot(234), plt.imshow(image_gaussianblur), plt.title('Yuji with Gaussian Blur')
+        plt.subplot(234), plt.imshow(image_gaussianblur), plt.title('Image with Gaussian Blur')
         plt.xticks([])
         plt.yticks([])
-        plt.subplot(235), plt.imshow(image_noise), plt.title('Yuji with Noise')
+        plt.subplot(235), plt.imshow(image_noise), plt.title('Image with Noise')
         plt.xticks([])
         plt.yticks([])
-        plt.subplot(236), plt.imshow(image_blurednoise), plt.title('Yuji with Noise and then Blur')
+        plt.subplot(236), plt.imshow(image_blurednoise), plt.title('Image with Noise and then Blur')
         plt.xticks([])
         plt.yticks([])
 
@@ -75,7 +75,7 @@ def upload_and_process():
 
 
 # Upload File button
-b1 = customtkinter.CTkButton(master=my_w, text='Select Yuji', width=35,corner_radius=15,font=my_font2, command=upload_and_process)
+b1 = customtkinter.CTkButton(master=my_w, text='Select Image', width=35,corner_radius=15,font=my_font2, command=upload_and_process)
 b1.place(relx=0.5, rely=0.43, anchor=CENTER)
 
 
